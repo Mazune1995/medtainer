@@ -1,0 +1,9 @@
+Djanjo>=4.0
+
+djangorestframework
+
+gunicorn
+
+psycopg2-binary # Heroku
+
+whitenoise # Optional for static file handling
