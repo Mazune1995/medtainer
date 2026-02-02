@@ -42,13 +42,16 @@ INSTALLED_APPS = [
 
 AUTH_USER_MODEL = 'medtainer.User'
 
+DEBUG = False
 
-#Deployment config
+ALLOWED_HOSTS = ['.onrender.com']  # Deployment config for Render.com
 
-ALLOWED_HOSTS = ['*']  # For Heroku or PythonAnywhere
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Directory for collected static files      
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',

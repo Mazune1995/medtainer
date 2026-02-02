@@ -1,1 +1,1 @@
-web: gunicorn hems_project.wsgi
+web: gunicorn medtainer.wsgi
