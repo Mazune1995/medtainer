@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 from pathlib import Path
 
+import gunicorn
+
+from medtainer import medtainer
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -47,7 +51,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['.onrender.com']  # Deployment config for Render.com
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'  # Directory for collected static files      
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Directory for collected static files  
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
