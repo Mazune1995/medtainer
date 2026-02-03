@@ -56,3 +56,8 @@ DATABASES = {
 }
 
 STATIC_URL = 'static/'
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# optional for production
+WHITENOISE_USE_FINDERS = True
