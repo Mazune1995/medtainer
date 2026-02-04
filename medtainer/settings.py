@@ -16,7 +16,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #your apps here
+    'medtainer_app',
 ]
+
+AUTH_USER_MODEL = 'medtainer_app.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
