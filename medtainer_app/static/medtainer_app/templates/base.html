@@ -1,0 +1,14 @@
+<div class="theme-toggle-container">
+    <!-- Heartbeat icon -->
+    <span class="heartbeat">❤️</span>
+
+    <!-- Toggle switch -->
+    <label class="theme-switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider"></span>
+    </label>
+</div>
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'medtainer_app/css/theme.css' %}">
+<script src="{% static 'medtainer_app/js/theme-toggle.js' %}"></script>
