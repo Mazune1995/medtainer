@@ -19,20 +19,15 @@ INSTALLED_APPS = [
     #your apps here
     'medtainer_app',
     'medtainer',
-
-    # Tailwind CSS integration
     'tailwind',
     'theme_app',
 ]
 
+# Only include browser reload in DEBUG mode
+if DEBUG:
+    INSTALLED_APPS += ['django_browser_reload']
+    
 TAILWIND_APP_NAME = 'theme_app'
-
-# Optional: If you want to use JIT mode
-INTERNAL_IPS = ['127.0.0.1']
-
-TAILWIND_STANDALONE_BINARY_PATH = BASE_DIR / "theme_app" / "tailwindcss" / "tailwindcss.exe"
-
-
 
 AUTH_USER_MODEL = 'medtainer_app.CustomUser'
 
