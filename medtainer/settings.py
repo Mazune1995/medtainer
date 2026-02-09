@@ -16,10 +16,23 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     #your apps here
     'medtainer_app',
+    'medtainer',
+
+    # Tailwind CSS integration
+    'tailwind',
+    'theme_app',
 ]
+
+TAILWIND_APP_NAME = 'theme_app'
+
+# Optional: If you want to use JIT mode
+INTERNAL_IPS = ['127.0.0.1']
+
+TAILWIND_STANDALONE_BINARY_PATH = BASE_DIR / "theme_app" / "tailwindcss" / "tailwindcss.exe"
+
+
 
 AUTH_USER_MODEL = 'medtainer_app.CustomUser'
 
@@ -35,11 +48,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'medtainer.urls'
 
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [],  # empty is fine if using app directories
+        'APP_DIRS': True,  # must be True
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',

@@ -3,5 +3,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('medtainer_app.urls')),  # <- correct app name
+    path('', include('main.urls')),  # make sure your app's urls are included
 ]

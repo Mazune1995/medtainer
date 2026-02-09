@@ -1,3 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render  # ✅ This is required
 
-# Create your views here.
+def home(request):
+    return render(request, 'medtainer_app/home.html')

@@ -1,0 +1,48 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block content %}
+<div class="p-4">
+
+  <!-- Top bar -->
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="text-2xl font-bold">Site Administration</h1>
+    <div>
+      <select id="theme-toggle" class="border rounded px-2 py-1">
+        <option value="system">System Default</option>
+        <option value="light">Light Mode</option>
+        <option value="dark">Dark Mode</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Sections Grid -->
+  <div class="grid gap-4 md:grid-cols-3">
+    
+    <!-- Authentication & Authorization Card -->
+    <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+      <h2 class="font-semibold mb-2">Groups</h2>
+      <a href="{% url 'admin:auth_group_add' %}" class="bg-blue-600 text-white px-3 py-1 rounded">Add</a>
+      <a href="{% url 'admin:auth_group_changelist' %}" class="ml-2 px-3 py-1 border rounded">Manage</a>
+    </div>
+
+    <!-- Example Equipment Card -->
+    <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+      <img src="{% static 'images/equipment_sample.jpg' %}" class="rounded mb-2">
+      <h2 class="font-semibold">Equipments</h2>
+      <a href="{% url 'admin:core_equipment_add' %}" class="bg-blue-600 text-white px-3 py-1 rounded mt-1 inline-block">Add</a>
+      <a href="{% url 'admin:core_equipment_changelist' %}" class="ml-2 px-3 py-1 border rounded mt-1 inline-block">View / Edit</a>
+    </div>
+
+    <!-- Repeat other cards similarly -->
+    
+  </div>
+</div>
+<div class="p-6 bg-blue-600 text-white text-2xl rounded-xl">
+    Tailwind is working 🚀
+</div><button class="px-6 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
+  Save
+</button>
+
+
+{% endblock %}

@@ -1,14 +1,44 @@
-<div class="theme-toggle-container">
-    <!-- Heartbeat icon -->
-    <span class="heartbeat">❤️</span>
-
-    <!-- Toggle switch -->
-    <label class="theme-switch">
-        <input type="checkbox" id="theme-toggle">
-        <span class="slider"></span>
-    </label>
-</div>
-
 {% load static %}
-<link rel="stylesheet" href="{% static 'medtainer_app/css/theme.css' %}">
-<script src="{% static 'medtainer_app/js/theme-toggle.js' %}"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% tailwind_css %}
+    <meta charset="UTF-8">
+    <title>Test Tailwind</title>
+    <link href="{% static 'css/dist/styles.css' %}" rel="stylesheet">
+</head>
+<body class="bg-blue-200 text-white p-8">
+    <h1 class="text-4xl font-bold">Tailwind is working!</h1><button class="px-6 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
+  Save
+</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Django + Tailwind</title>
+  {% load static %}
+  <link href="{% static 'css/output.css' %}" rel="stylesheet">
+</head>
+<body class="min-h-screen flex items-center justify-center bg-base-200">
+
+  <div class="card bg-base-100 shadow-xl p-8 text-center">
+    <h1 class="text-2xl font-bold mb-4">
+      Django + Tailwind is Working!
+    </h1>
+
+    <p class="mb-6">
+      This is a ready-to-go template using Tailwind CSS and DaisyUI components.
+    </p>
+
+    <button class="btn btn-primary">
+      Click Me
+    </button>
+  </div>
+
+</body>
+</html>
+
+
+
+</body>
+</html>
